@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2018.3_AR71948 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Dec 17 10:40:01 2019
+# Process ID: 29219
+# Current directory: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0
+# Command line: vivado -mode tcl
+# Log file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/vivado.log
+# Journal file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/vivado.jou
+#-----------------------------------------------------------
+write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit "up 0x0 top.bit"
+Command: write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit {up 0x0 top.bit}
+0 Infos, 0 Warnings, 0 Critical Warnings and 1 Errors encountered.
+write_cfgmem failed
+ERROR: [Common 17-163] Missing value for option 'file', please type 'write_cfgmem -help' for usage info.
+write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit "up 0x0 quabo_v0090_GOLD.bit" -checksum -file "quabo_v0090_GOLD.bin" -force
+Command: write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit {up 0x0 quabo_v0090_GOLD.bit} -checksum -file quabo_v0090_GOLD.bin -force
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile quabo_v0090_GOLD.bit
+Writing file ./quabo_v0090_GOLD.bin
+Writing log file ./quabo_v0090_GOLD.prm
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX1
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+Checksum           0x9CAE5451
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)                 Checksum
+0x00000000    0x00661EDB    Dec 17 10:39:19 2019    quabo_v0090_GOLD.bit    0x04671175
+File Checksum Total                                                         0x04671175
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_cfgmem completed successfully
+write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit "up 0x0 download.bit" -checksum -file "quabo_v0090.bin" -force
+Command: write_cfgmem -format bin -size 32 -interface SPIx1 -loadbit {up 0x0 download.bit} -checksum -file quabo_v0090.bin -force
+Creating config memory files...
+Creating bitstream load up from address 0x00000000
+Loading bitfile download.bit
+Writing file ./quabo_v0090.bin
+Writing log file ./quabo_v0090.prm
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX1
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+Checksum           0x9CAF6FE9
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)          Checksum
+0x00000000    0x00661EDB    Dec 17 10:45:11 2019    download.bit     0x04682D0D
+File Checksum Total                                                  0x04682D0D
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_cfgmem completed successfully
+quit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 14:00:04 2019...

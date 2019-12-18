@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# 
+# Start of session at: Tue Dec 10 16:16:29 2019
+# Process ID: 30608
+# Current directory: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0
+# Command line: updatemem -mode batch -source /home/wei/Software/Vivado/install/SDK/2018.3/scripts/updatemem/main.tcl -notrace -tclargs -meminfo /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/base_mb_wrapper.mmi -data /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/quabo_service/Debug/quabo_service.elf -proc base_mb_i/microblaze_0 -bit /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/base_mb_wrapper.bit -out /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/download.bit -force
+# Log file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/updatemem.log
+# Journal file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/updatemem.jou
+#-----------------------------------------------------------
+source /home/wei/Software/Vivado/install/SDK/2018.3/scripts/updatemem/main.tcl -notrace
+ Loading bitfile /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/base_mb_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/base_mb_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1057.098 ; gain = 432.453 ; free physical = 11779 ; free virtual = 31861
+INFO: [Common 17-206] Exiting updatemem at Tue Dec 10 16:16:37 2019...

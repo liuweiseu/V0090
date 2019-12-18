@@ -1,0 +1,234 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3_AR71948 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date             : Mon Dec 16 19:58:40 2019
+| Host             : Wei-Berkeley running 64-bit Ubuntu 18.04.3 LTS
+| Command          : report_power -file base_mb_wrapper_power_routed.rpt -pb base_mb_wrapper_power_summary_routed.pb -rpx base_mb_wrapper_power_routed.rpx
+| Design           : base_mb_wrapper
+| Device           : xc7k160tffg676-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.610        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.470        |
+| Device Static (W)        | 0.140        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 81.9         |
+| Junction Temperature (C) | 28.1         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.169 |       32 |       --- |             --- |
+| Slice Logic              |     0.043 |    56581 |       --- |             --- |
+|   LUT as Logic           |     0.030 |    18021 |    101400 |           17.77 |
+|   CARRY4                 |     0.007 |     1947 |     25350 |            7.68 |
+|   Register               |     0.003 |    27468 |    202800 |           13.54 |
+|   LUT as Distributed RAM |     0.002 |     1864 |     35000 |            5.33 |
+|   F7/F8 Muxes            |    <0.001 |     1178 |    101400 |            1.16 |
+|   LUT as Shift Register  |    <0.001 |      185 |     35000 |            0.53 |
+|   Others                 |    <0.001 |     3059 |       --- |             --- |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
+| Signals                  |     0.070 |    41464 |       --- |             --- |
+| Block RAM                |     0.091 |      132 |       325 |           40.62 |
+| MMCM                     |     0.533 |        5 |         8 |           62.50 |
+| DSPs                     |    <0.001 |        3 |       600 |            0.50 |
+| I/O                      |     0.089 |      365 |       400 |           91.25 |
+| GTX                      |     0.474 |        2 |         8 |           25.00 |
+| XADC                     |     0.002 |        1 |       --- |             --- |
+| Static Power             |     0.140 |          |           |                 |
+| Total                    |     1.610 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.448 |       0.399 |      0.049 |
+| Vccaux    |       1.800 |     0.337 |       0.319 |      0.018 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.019 |       0.018 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.013 |       0.007 |      0.006 |
+| MGTAVcc   |       1.000 |     0.222 |       0.218 |      0.005 |
+| MGTAVtt   |       1.200 |     0.202 |       0.197 |      0.005 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.021 |       0.001 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                     | Domain                                                                                                                            | Constraint (ns) |
++-------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| BIT_CLK_P[0]                                                                                                                              | BIT_CLK_P[0]                                                                                                                      |            16.7 |
+| CLKFBIN                                                                                                                                   | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/CLKFBIN                                               |             8.0 |
+| TS_clk_125m_gtx_p_i_0                                                                                                                     | clk_125m_gtx_p_i_0                                                                                                                |             8.0 |
+| base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gtwizard_i/gt0_GTWIZARD_i/gtxe2_i/TXOUTCLK | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gtwizard_i/gt0_GTWIZARD_i/txoutclk |            16.0 |
+| base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                                                   | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                                            |            33.3 |
+| base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                                                 | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                                                    |            33.3 |
+| base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                          | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                  |            16.0 |
+| base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                          | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/rst_int_reg_1                 |            16.0 |
+| base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/rx_rec_clk_bufin           | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/rx_rec_clk_bufin   |            16.0 |
+| clk_100_base_mb_clk_wiz_1_0                                                                                                               | base_mb_i/clk_wiz_1/inst/clk_100_base_mb_clk_wiz_1_0                                                                              |            10.0 |
+| clk_10_base_mb_clk_wiz_1_0                                                                                                                | base_mb_i/clk_wiz_1/inst/clk_10_base_mb_clk_wiz_1_0                                                                               |           100.0 |
+| clk_200_base_mb_clk_wiz_1_0                                                                                                               | base_mb_i/clk_wiz_1/inst/clk_200_base_mb_clk_wiz_1_0                                                                              |             5.0 |
+| clk_20m_vcxo_i_0                                                                                                                          | clk_20m_vcxo_i_0                                                                                                                  |            50.0 |
+| clk_250_base_mb_clk_wiz_0_0                                                                                                               | base_mb_i/clk_wiz_0/inst/clk_250_base_mb_clk_wiz_0_0                                                                              |             4.0 |
+| clk_62m5_base_mb_clk_wiz_0_0                                                                                                              | base_mb_i/clk_wiz_0/inst/clk_62m5_base_mb_clk_wiz_0_0                                                                             |            16.0 |
+| clk_dmtd                                                                                                                                  | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/clk_dmtd                                              |            16.0 |
+| clk_dmtd_fb                                                                                                                               | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/clk_dmtd_fb                                           |            50.0 |
+| clk_out250_0_base_mb_clk_wiz_0_0                                                                                                          | base_mb_i/clk_wiz_0/inst/clk_out250_0_base_mb_clk_wiz_0_0                                                                         |             4.0 |
+| clk_out250_1_base_mb_clk_wiz_0_0                                                                                                          | base_mb_i/clk_wiz_0/inst/clk_out250_1_base_mb_clk_wiz_0_0                                                                         |             4.0 |
+| clk_out250_2_base_mb_clk_wiz_0_0                                                                                                          | base_mb_i/clk_wiz_0/inst/clk_out250_2_base_mb_clk_wiz_0_0                                                                         |             4.0 |
+| clk_out250_3_base_mb_clk_wiz_0_0                                                                                                          | base_mb_i/clk_wiz_0/inst/clk_out250_3_base_mb_clk_wiz_0_0                                                                         |             4.0 |
+| clk_sys                                                                                                                                   | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/clk_sys                                               |            16.0 |
+| clkfbout                                                                                                                                  | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/core_clocking_i/clkfbout                                                               |            16.0 |
+| clkfbout_base_mb_clk_wiz_0_0                                                                                                              | base_mb_i/clk_wiz_0/inst/clkfbout_base_mb_clk_wiz_0_0                                                                             |            16.0 |
+| clkfbout_base_mb_clk_wiz_1_0                                                                                                              | base_mb_i/clk_wiz_1/inst/clkfbout_base_mb_clk_wiz_1_0                                                                             |            16.0 |
+| clkout0                                                                                                                                   | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/core_clocking_i/clkout0                                                                |             8.0 |
+| clkout1                                                                                                                                   | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/core_clocking_i/clkout1                                                                |            16.0 |
+| mgt_clk_0_clk_p                                                                                                                           | mgt_clk_0_clk_p                                                                                                                   |             8.0 |
++-------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| base_mb_wrapper               |     1.470 |
+|   base_mb_i                   |     1.451 |
+|     axi_ethernet_0            |     0.418 |
+|       inst                    |     0.418 |
+|     axi_ethernet_0_fifo       |     0.014 |
+|       U0                      |     0.014 |
+|     axi_fifo_mm_s_IM          |     0.010 |
+|       U0                      |     0.010 |
+|     axi_fifo_mm_s_PH          |     0.010 |
+|       U0                      |     0.010 |
+|     axi_hwicap_0              |     0.008 |
+|       U0                      |     0.008 |
+|     axi_iic_0                 |     0.002 |
+|       U0                      |     0.002 |
+|     axi_interconnect_0        |     0.001 |
+|       xbar                    |     0.001 |
+|     axi_quad_spi_0            |     0.001 |
+|       U0                      |     0.001 |
+|     axi_quad_spi_1            |     0.004 |
+|       U0                      |     0.004 |
+|     axi_timer_0               |     0.002 |
+|       U0                      |     0.002 |
+|     axi_timer_1               |     0.004 |
+|       U0                      |     0.004 |
+|     clk_wiz_0                 |     0.112 |
+|       inst                    |     0.112 |
+|     clk_wiz_1                 |     0.107 |
+|       inst                    |     0.107 |
+|     elapsed_time_gen_0        |     0.013 |
+|       inst                    |     0.013 |
+|     flash_control_0           |     0.023 |
+|       inst                    |     0.023 |
+|     in_buf_ds_1bit_0          |     0.009 |
+|       inst                    |     0.009 |
+|     in_buf_ds_4bit_0          |     0.035 |
+|       inst                    |     0.035 |
+|     in_buf_ds_adcbitclk       |     0.009 |
+|       inst                    |     0.009 |
+|     maroc_dc_0                |     0.098 |
+|       inst                    |     0.098 |
+|     maroc_slow_control_0      |     0.002 |
+|       inst                    |     0.002 |
+|     microblaze_0              |     0.012 |
+|       U0                      |     0.012 |
+|     microblaze_0_axi_periph   |     0.002 |
+|       xbar                    |     0.002 |
+|     microblaze_0_local_memory |     0.010 |
+|       lmb_bram                |     0.010 |
+|     wrc_board_quabo_Light_0   |     0.538 |
+|       U0                      |     0.538 |
+|     xadc_wiz_0                |     0.003 |
+|       inst                    |     0.003 |
++-------------------------------+-----------+
+
+
