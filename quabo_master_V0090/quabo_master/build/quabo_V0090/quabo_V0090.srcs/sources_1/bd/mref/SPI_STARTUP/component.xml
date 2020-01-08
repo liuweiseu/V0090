@@ -319,7 +319,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-12-18T18:51:06Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2019-12-18T20:05:37Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3_AR71948</xilinx:xilinxVersion>

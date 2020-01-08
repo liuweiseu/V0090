@@ -65,27 +65,17 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  create_project -in_memory -part xc7k160tffg676-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/build/quabo_V008_2/quabo_V008_2.cache/wt [current_project]
-  set_property parent.project_path /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/build/quabo_V008_2/quabo_V008_2.xpr [current_project]
-  set_property ip_repo_paths /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo [current_project]
+  set_param xicom.use_bs_reader 1
+  set_param tcl.collectionResultDisplayLimit 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/quabo_V0090/quabo_V0090.runs/impl_1/base_mb_wrapper.dcp
+  set_property webtalk.parent_dir /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/quabo_V0090/quabo_V0090.cache/wt [current_project]
+  set_property parent.project_path /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/quabo_V0090/quabo_V0090.xpr [current_project]
+  set_property ip_repo_paths /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/build/quabo_V008_2/quabo_V008_2.cache/ip [current_project]
+  set_property ip_output_repo /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/quabo_V0090/quabo_V0090.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/build/quabo_V008_2/quabo_V008_2.runs/synth_1/base_mb_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/bd/base_mb/base_mb.bd
-  set_param project.isImplRun false
-  read_xdc /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/constraints/pinout.xdc
-  read_xdc /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/constraints/timing.xdc
-  set_param project.isImplRun true
-  link_design -top base_mb_wrapper -part xc7k160tffg676-1
-  set_param project.isImplRun false
-  write_hwdef -force -file base_mb_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -117,8 +107,6 @@ start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
-  read_checkpoint -auto_incremental  -incremental /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/build/quabo_V008_2/quabo_V008_2.srcs/utils_1/imports/impl_1/base_mb_wrapper_routed.dcp
-  catch { report_incremental_reuse -file base_mb_wrapper_incremental_reuse_pre_placed.rpt }
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 
@@ -183,6 +171,9 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/bd/base_mb/ip/base_mb_microblaze_0_0/data/mb_bootloop_le.elf
+  set_property SCOPED_TO_REF base_mb [get_files -all /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/bd/base_mb/ip/base_mb_microblaze_0_0/data/mb_bootloop_le.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/bd/base_mb/ip/base_mb_microblaze_0_0/data/mb_bootloop_le.elf]
   catch { write_mem_info -force base_mb_wrapper.mmi }
   catch { write_bmm -force base_mb_wrapper_bd.bmm }
   write_bitstream -force base_mb_wrapper.bit 

@@ -260,16 +260,16 @@ struct netif {
    *  For ethernet physical layer, this is usually ethip6_output() */
   netif_output_ip6_fn output_ip6;
 #endif /* LWIP_IPV6 */
-#if LWIP_NETIF_STATUS_CALLBACK
+//#if LWIP_NETIF_STATUS_CALLBACK
   /** This function is called when the netif state is set to up or down
    */
   netif_status_callback_fn status_callback;
-#endif /* LWIP_NETIF_STATUS_CALLBACK */
-#if LWIP_NETIF_LINK_CALLBACK
+//#endif /* LWIP_NETIF_STATUS_CALLBACK */
+//#if LWIP_NETIF_LINK_CALLBACK
   /** This function is called when the netif link is set to up or down
    */
   netif_status_callback_fn link_callback;
-#endif /* LWIP_NETIF_LINK_CALLBACK */
+//#endif /* LWIP_NETIF_LINK_CALLBACK */
 #if LWIP_NETIF_REMOVE_CALLBACK
   /** This function is called when the netif has been removed */
   netif_status_callback_fn remove_callback;

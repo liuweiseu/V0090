@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3_AR71948 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Mon Dec  9 16:02:29 2019
+//Date        : Fri Jan  3 12:51:30 2020
 //Host        : Wei-Berkeley running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target base_mb_wrapper.bd
 //Design      : base_mb_wrapper
@@ -68,6 +68,10 @@ module base_mb_wrapper
     sfp_0_rxp,
     sfp_0_txn,
     sfp_0_txp,
+    sfp_1_rxn,
+    sfp_1_rxp,
+    sfp_1_txn,
+    sfp_1_txp,
     shutter_down_lim,
     shutter_open,
     shutter_power,
@@ -76,6 +80,10 @@ module base_mb_wrapper
     step_drive,
     stim_dac,
     stim_drive,
+    sysclkin_n,
+    sysclkin_p,
+    sysclkout_n,
+    sysclkout_p,
     user_sfp_0_sfp_los_i,
     user_sfp_0_sfp_mod_def1_b,
     user_sfp_0_sfp_mod_def2_b,
@@ -92,7 +100,7 @@ module base_mb_wrapper
   input FRM_CLK_N;
   input FRM_CLK_P;
   output [0:0]HV_RSTb;
-  output J3pin1;
+  output [0:0]J3pin1;
   input J3pin3;
   output J3pin4;
   input J3pin5;
@@ -104,7 +112,7 @@ module base_mb_wrapper
   input [3:0]SC_DIN;
   output [3:0]SC_DOUT;
   output [3:0]SC_RSTb;
-  output [0:0]SMA_J1;
+  output SMA_J1;
   output SPI_CK;
   output [3:0]SPI_SS;
   output adc_clk_out;
@@ -141,6 +149,10 @@ module base_mb_wrapper
   input sfp_0_rxp;
   output sfp_0_txn;
   output sfp_0_txp;
+  input sfp_1_rxn;
+  input sfp_1_rxp;
+  output sfp_1_txn;
+  output sfp_1_txp;
   input [0:0]shutter_down_lim;
   output [0:0]shutter_open;
   output [0:0]shutter_power;
@@ -149,6 +161,10 @@ module base_mb_wrapper
   output [3:0]step_drive;
   output stim_dac;
   output stim_drive;
+  input sysclkin_n;
+  input sysclkin_p;
+  output sysclkout_n;
+  output sysclkout_p;
   input user_sfp_0_sfp_los_i;
   inout user_sfp_0_sfp_mod_def1_b;
   inout user_sfp_0_sfp_mod_def2_b;
@@ -166,7 +182,7 @@ module base_mb_wrapper
   wire FRM_CLK_N;
   wire FRM_CLK_P;
   wire [0:0]HV_RSTb;
-  wire J3pin1;
+  wire [0:0]J3pin1;
   wire J3pin3;
   wire J3pin4;
   wire J3pin5;
@@ -178,7 +194,7 @@ module base_mb_wrapper
   wire [3:0]SC_DIN;
   wire [3:0]SC_DOUT;
   wire [3:0]SC_RSTb;
-  wire [0:0]SMA_J1;
+  wire SMA_J1;
   wire SPI_CK;
   wire [3:0]SPI_SS;
   wire adc_clk_out;
@@ -221,6 +237,10 @@ module base_mb_wrapper
   wire sfp_0_rxp;
   wire sfp_0_txn;
   wire sfp_0_txp;
+  wire sfp_1_rxn;
+  wire sfp_1_rxp;
+  wire sfp_1_txn;
+  wire sfp_1_txp;
   wire [0:0]shutter_down_lim;
   wire [0:0]shutter_open;
   wire [0:0]shutter_power;
@@ -229,6 +249,10 @@ module base_mb_wrapper
   wire [3:0]step_drive;
   wire stim_dac;
   wire stim_drive;
+  wire sysclkin_n;
+  wire sysclkin_p;
+  wire sysclkout_n;
+  wire sysclkout_p;
   wire user_sfp_0_sfp_los_i;
   wire user_sfp_0_sfp_mod_def1_b;
   wire user_sfp_0_sfp_mod_def2_b;
@@ -300,6 +324,10 @@ module base_mb_wrapper
         .sfp_0_rxp(sfp_0_rxp),
         .sfp_0_txn(sfp_0_txn),
         .sfp_0_txp(sfp_0_txp),
+        .sfp_1_rxn(sfp_1_rxn),
+        .sfp_1_rxp(sfp_1_rxp),
+        .sfp_1_txn(sfp_1_txn),
+        .sfp_1_txp(sfp_1_txp),
         .shutter_down_lim(shutter_down_lim),
         .shutter_open(shutter_open),
         .shutter_power(shutter_power),
@@ -308,6 +336,10 @@ module base_mb_wrapper
         .step_drive(step_drive),
         .stim_dac(stim_dac),
         .stim_drive(stim_drive),
+        .sysclkin_n(sysclkin_n),
+        .sysclkin_p(sysclkin_p),
+        .sysclkout_n(sysclkout_n),
+        .sysclkout_p(sysclkout_p),
         .user_sfp_0_sfp_los_i(user_sfp_0_sfp_los_i),
         .user_sfp_0_sfp_mod_def1_b(user_sfp_0_sfp_mod_def1_b),
         .user_sfp_0_sfp_mod_def2_b(user_sfp_0_sfp_mod_def2_b),

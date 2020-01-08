@@ -46,6 +46,8 @@
 #include <sys/time.h>
 #include "cpu.h"
 
+#define sys_now(x) ms_tmrctr()
+
 /* As per new design of lwip-2.0.2,
  * LWIP_NO_STDINT_H should be defined as 1 in cc.h */
 #define LWIP_NO_STDINT_H 1

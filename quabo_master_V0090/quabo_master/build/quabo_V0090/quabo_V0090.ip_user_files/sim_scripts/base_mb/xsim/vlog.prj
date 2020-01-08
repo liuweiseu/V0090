@@ -1,13 +1,13 @@
-verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" \
+verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
 "../../../bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0_clk_wiz.v" \
 "../../../bd/base_mb/ip/base_mb_clk_wiz_1_0/base_mb_clk_wiz_1_0.v" \
 "../../../bd/base_mb/ip/base_mb_lmb_bram_0/sim/base_mb_lmb_bram_0.v" \
 
-verilog fifo_generator_v13_2_3 --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" \
+verilog fifo_generator_v13_2_3 --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
 "../../../../../../bd/base_mb/ipshared/64f4/simulation/fifo_generator_vlog_beh.v" \
 "../../../../../../bd/base_mb/ipshared/64f4/hdl/fifo_generator_v13_2_rfs.v" \
 
-verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" \
+verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
 "../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_0/bd_0b46_eth_buf_0_sim_netlist.v" \
 "../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/synth/bd_0b46_mac_0_axi4_lite_ipif_wrapper.v" \
 "../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/synth/statistics/bd_0b46_mac_0_vector_decode.v" \
@@ -112,6 +112,53 @@ verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --
 "../../../bd/base_mb/ip/base_mb_SPI_STARTUP_0_0/sim/base_mb_SPI_STARTUP_0_0.v" \
 "../../../bd/base_mb/sim/base_mb.v" \
 "../../../bd/base_mb/ip/base_mb_xlconstant_1_1/sim/base_mb_xlconstant_1_1.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/synth/bd_cb17_mac_0_axi4_lite_ipif_wrapper.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/synth/statistics/bd_cb17_mac_0_vector_decode.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/synth/bd_cb17_mac_0_block.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/synth/bd_cb17_mac_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_cpll_railing.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_gtwizard_init.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_tx_startup_fsm.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_rx_startup_fsm.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_reset_wtd_timer.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_gtwizard.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_gtwizard_multi_gt.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_gtwizard_gt.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/bd_cb17_pcs_pma_0_reset_sync.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/bd_cb17_pcs_pma_0_sync_block.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/transceiver/bd_cb17_pcs_pma_0_transceiver.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/bd_cb17_pcs_pma_0_block.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_2/synth/bd_cb17_pcs_pma_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_3/sim/bd_cb17_xlconstant_phyadd_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_4/sim/bd_cb17_xlconstant_config_vec_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_5/sim/bd_cb17_xlconstant_config_val_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_8/sim/bd_cb17_xlconstant_0_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_9/sim/bd_cb17_util_vector_logic_0_0.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/sim/bd_cb17.v" \
+"../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/sim/base_mb_axi_ethernet_1_0.v" \
+"../../../bd/base_mb/ip/base_mb_OBUFDS_FOR_CLK_0_0/sim/base_mb_OBUFDS_FOR_CLK_0_0.v" \
+"../../../bd/base_mb/ip/base_mb_FIFO_for_AXIS_0_0/ip/fifo_generator_1/sim/fifo_generator_1.v" \
+"../../../bd/base_mb/ipshared/6850/new/FIFO_for_AXIS.v" \
+"../../../bd/base_mb/ip/base_mb_FIFO_for_AXIS_0_0/sim/base_mb_FIFO_for_AXIS_0_0.v" \
+
+verilog axis_infrastructure_v1_1_0 --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
+"../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
+
+verilog axis_register_slice_v1_1_18 --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
+"../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl/axis_register_slice_v1_1_vl_rfs.v" \
+
+verilog axis_switch_v1_1_18 --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
+"../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl/axis_switch_v1_1_vl_rfs.v" \
+
+verilog xil_defaultlib --include "../../../../../../bd/base_mb/ipshared/85a3" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_0_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ipshared/ec67/hdl" --include "../../../../../../bd/base_mb/ipshared/9820/ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_axi_ethernet_1_0/bd_0/ip/ip_1/header_files" --include "../../../../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/hdl" \
+"../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/ip/axis_switch_0/sim/axis_switch_0.v" \
+"../../../bd/base_mb/ipshared/e7ae/new/AXI_Stream_Switch.v" \
+"../../../bd/base_mb/ip/base_mb_AXI_Stream_Switch_0_0/sim/base_mb_AXI_Stream_Switch_0_0.v" \
+"../../../bd/base_mb/ip/base_mb_ETH_CORE_CTRL_0_0/ip/fifo_generator_0/sim/fifo_generator_0.v" \
+"../../../bd/base_mb/ipshared/ed0e/new/ETH_CORE_CTRL.v" \
+"../../../bd/base_mb/ip/base_mb_ETH_CORE_CTRL_0_0/sim/base_mb_ETH_CORE_CTRL_0_0.v" \
+"../../../bd/base_mb/ip/base_mb_ETH_CORE_CTRL_0_1/sim/base_mb_ETH_CORE_CTRL_0_1.v" \
+"../../../bd/base_mb/ip/base_mb_IBUFDS_FOR_CLK_0_0/sim/base_mb_IBUFDS_FOR_CLK_0_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3_AR71948 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Mon Dec 16 19:58:40 2019
+| Date             : Tue Jan  7 17:44:33 2020
 | Host             : Wei-Berkeley running 64-bit Ubuntu 18.04.3 LTS
 | Command          : report_power -file base_mb_wrapper_power_routed.rpt -pb base_mb_wrapper_power_summary_routed.pb -rpx base_mb_wrapper_power_routed.rpx
 | Design           : base_mb_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.610        |
+| Total On-Chip Power (W)  | 1.979        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.470        |
-| Device Static (W)        | 0.140        |
+| Dynamic (W)              | 1.836        |
+| Device Static (W)        | 0.143        |
 | Effective TJA (C/W)      | 1.9          |
-| Max Ambient (C)          | 81.9         |
-| Junction Temperature (C) | 28.1         |
+| Max Ambient (C)          | 81.2         |
+| Junction Temperature (C) | 28.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.169 |       32 |       --- |             --- |
-| Slice Logic              |     0.043 |    56581 |       --- |             --- |
-|   LUT as Logic           |     0.030 |    18021 |    101400 |           17.77 |
-|   CARRY4                 |     0.007 |     1947 |     25350 |            7.68 |
-|   Register               |     0.003 |    27468 |    202800 |           13.54 |
-|   LUT as Distributed RAM |     0.002 |     1864 |     35000 |            5.33 |
-|   F7/F8 Muxes            |    <0.001 |     1178 |    101400 |            1.16 |
-|   LUT as Shift Register  |    <0.001 |      185 |     35000 |            0.53 |
-|   Others                 |    <0.001 |     3059 |       --- |             --- |
+| Clocks                   |     0.221 |       35 |       --- |             --- |
+| Slice Logic              |     0.057 |    75248 |       --- |             --- |
+|   LUT as Logic           |     0.041 |    23356 |    101400 |           23.03 |
+|   CARRY4                 |     0.008 |     2205 |     25350 |            8.70 |
+|   Register               |     0.005 |    37528 |    202800 |           18.50 |
+|   LUT as Distributed RAM |     0.003 |     2232 |     35000 |            6.38 |
+|   LUT as Shift Register  |    <0.001 |      524 |     35000 |            1.50 |
+|   F7/F8 Muxes            |    <0.001 |     1243 |    101400 |            1.23 |
+|   Others                 |    <0.001 |     4150 |       --- |             --- |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-| Signals                  |     0.070 |    41464 |       --- |             --- |
-| Block RAM                |     0.091 |      132 |       325 |           40.62 |
+| Signals                  |     0.089 |    55162 |       --- |             --- |
+| Block RAM                |     0.114 |      146 |       325 |           44.92 |
 | MMCM                     |     0.533 |        5 |         8 |           62.50 |
 | DSPs                     |    <0.001 |        3 |       600 |            0.50 |
-| I/O                      |     0.089 |      365 |       400 |           91.25 |
-| GTX                      |     0.474 |        2 |         8 |           25.00 |
+| I/O                      |     0.111 |      369 |       400 |           92.25 |
+| GTX                      |     0.711 |        3 |         8 |           37.50 |
 | XADC                     |     0.002 |        1 |       --- |             --- |
-| Static Power             |     0.140 |          |           |                 |
-| Total                    |     1.610 |          |           |                 |
+| Static Power             |     0.143 |          |           |                 |
+| Total                    |     1.979 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,18 +80,18 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.448 |       0.399 |      0.049 |
-| Vccaux    |       1.800 |     0.337 |       0.319 |      0.018 |
+| Vccint    |       1.000 |     0.566 |       0.515 |      0.051 |
+| Vccaux    |       1.800 |     0.339 |       0.320 |      0.018 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.019 |       0.018 |      0.001 |
+| Vcco18    |       1.800 |     0.029 |       0.028 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.013 |       0.007 |      0.006 |
-| MGTAVcc   |       1.000 |     0.222 |       0.218 |      0.005 |
-| MGTAVtt   |       1.200 |     0.202 |       0.197 |      0.005 |
+| Vccbram   |       1.000 |     0.015 |       0.009 |      0.006 |
+| MGTAVcc   |       1.000 |     0.332 |       0.327 |      0.005 |
+| MGTAVtt   |       1.200 |     0.300 |       0.295 |      0.005 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.021 |       0.001 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
@@ -141,10 +141,10 @@ Table of Contents
 | CLKFBIN                                                                                                                                   | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/CLKFBIN                                               |             8.0 |
 | TS_clk_125m_gtx_p_i_0                                                                                                                     | clk_125m_gtx_p_i_0                                                                                                                |             8.0 |
 | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gtwizard_i/gt0_GTWIZARD_i/gtxe2_i/TXOUTCLK | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/pcs_pma_block_i/transceiver_inst/gtwizard_inst/inst/gtwizard_i/gt0_GTWIZARD_i/txoutclk |            16.0 |
+| base_mb_i/clk_wiz_0/inst/clk_in1                                                                                                          | base_mb_i/IBUFDS_FOR_CLK_0/inst/O                                                                                                 |            16.0 |
 | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                                                   | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                                            |            33.3 |
 | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                                                 | base_mb_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                                                    |            33.3 |
 | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                          | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                  |            16.0 |
-| base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/I                          | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/rst_int_reg_1                 |            16.0 |
 | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/rx_rec_clk_bufin           | base_mb_i/wrc_board_quabo_Light_0/U0/cmp_xwrc_board_quabo/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/rx_rec_clk_bufin   |            16.0 |
 | clk_100_base_mb_clk_wiz_1_0                                                                                                               | base_mb_i/clk_wiz_1/inst/clk_100_base_mb_clk_wiz_1_0                                                                              |            10.0 |
 | clk_10_base_mb_clk_wiz_1_0                                                                                                                | base_mb_i/clk_wiz_1/inst/clk_10_base_mb_clk_wiz_1_0                                                                               |           100.0 |
@@ -164,6 +164,7 @@ Table of Contents
 | clkfbout_base_mb_clk_wiz_1_0                                                                                                              | base_mb_i/clk_wiz_1/inst/clkfbout_base_mb_clk_wiz_1_0                                                                             |            16.0 |
 | clkout0                                                                                                                                   | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/core_clocking_i/clkout0                                                                |             8.0 |
 | clkout1                                                                                                                                   | base_mb_i/axi_ethernet_0/inst/pcs_pma/inst/core_clocking_i/clkout1                                                                |            16.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK                                                | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs                                                              |            33.0 |
 | mgt_clk_0_clk_p                                                                                                                           | mgt_clk_0_clk_p                                                                                                                   |             8.0 |
 +-------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
@@ -177,14 +178,26 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| base_mb_wrapper               |     1.470 |
-|   base_mb_i                   |     1.451 |
+| base_mb_wrapper               |     1.836 |
+|   base_mb_i                   |     1.797 |
+|     ETH_CORE_CTRL_0           |     0.003 |
+|       inst                    |     0.003 |
+|     ETH_CORE_CTRL_1           |     0.002 |
+|       inst                    |     0.002 |
+|     FIFO_for_AXIS_0           |     0.006 |
+|       inst                    |     0.006 |
+|     IBUFDS_FOR_CLK_0          |     0.006 |
+|       inst                    |     0.006 |
+|     OBUFDS_FOR_CLK_0          |     0.016 |
+|       inst                    |     0.016 |
 |     axi_ethernet_0            |     0.418 |
 |       inst                    |     0.418 |
-|     axi_ethernet_0_fifo       |     0.014 |
-|       U0                      |     0.014 |
-|     axi_fifo_mm_s_IM          |     0.010 |
-|       U0                      |     0.010 |
+|     axi_ethernet_0_fifo       |     0.013 |
+|       U0                      |     0.013 |
+|     axi_ethernet_1            |     0.311 |
+|       inst                    |     0.311 |
+|     axi_fifo_mm_s_IM          |     0.011 |
+|       U0                      |     0.011 |
 |     axi_fifo_mm_s_PH          |     0.010 |
 |       U0                      |     0.010 |
 |     axi_hwicap_0              |     0.008 |
@@ -199,24 +212,24 @@ Table of Contents
 |       U0                      |     0.004 |
 |     axi_timer_0               |     0.002 |
 |       U0                      |     0.002 |
-|     axi_timer_1               |     0.004 |
-|       U0                      |     0.004 |
-|     clk_wiz_0                 |     0.112 |
-|       inst                    |     0.112 |
+|     axi_timer_1               |     0.003 |
+|       U0                      |     0.003 |
+|     clk_wiz_0                 |     0.113 |
+|       inst                    |     0.113 |
 |     clk_wiz_1                 |     0.107 |
 |       inst                    |     0.107 |
 |     elapsed_time_gen_0        |     0.013 |
 |       inst                    |     0.013 |
-|     flash_control_0           |     0.023 |
-|       inst                    |     0.023 |
+|     flash_control_0           |     0.024 |
+|       inst                    |     0.024 |
 |     in_buf_ds_1bit_0          |     0.009 |
 |       inst                    |     0.009 |
 |     in_buf_ds_4bit_0          |     0.035 |
 |       inst                    |     0.035 |
 |     in_buf_ds_adcbitclk       |     0.009 |
 |       inst                    |     0.009 |
-|     maroc_dc_0                |     0.098 |
-|       inst                    |     0.098 |
+|     maroc_dc_0                |     0.099 |
+|       inst                    |     0.099 |
 |     maroc_slow_control_0      |     0.002 |
 |       inst                    |     0.002 |
 |     microblaze_0              |     0.012 |
@@ -225,10 +238,16 @@ Table of Contents
 |       xbar                    |     0.002 |
 |     microblaze_0_local_memory |     0.010 |
 |       lmb_bram                |     0.010 |
-|     wrc_board_quabo_Light_0   |     0.538 |
-|       U0                      |     0.538 |
+|     wrc_board_quabo_Light_0   |     0.537 |
+|       U0                      |     0.537 |
 |     xadc_wiz_0                |     0.003 |
 |       inst                    |     0.003 |
+|   dbg_hub                     |     0.003 |
+|     inst                      |     0.003 |
+|       BSCANID.u_xsdbm_id      |     0.003 |
+|   u_ila_0                     |     0.017 |
+|     inst                      |     0.017 |
+|       ila_core_inst           |     0.017 |
 +-------------------------------+-----------+
 
 

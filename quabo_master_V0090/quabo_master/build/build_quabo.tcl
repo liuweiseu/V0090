@@ -172,6 +172,7 @@ set files [list \
  [file normalize "${origin_dir}/../hdl/SPI_access.v"] \
  [file normalize "${origin_dir}/../hdl/flash_control.v"] \
  [file normalize "${origin_dir}/../hdl/stepper_control.v"] \
+ [file normalize "${origin_dir}/../hdl/SPI_STARTUP.v"] \
  [file normalize "${origin_dir}/../bd/base_mb/base_mb.bd"] \
  [file normalize "${origin_dir}/../bd/base_mb/hdl/base_mb_wrapper.v"] \
 ]

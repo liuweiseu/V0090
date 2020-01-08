@@ -6,3 +6,8 @@ We merged remote configuration part with rick's new design(V008_2), and the chan
         [Notice: The netmask on your computer should also be changed to 255.255.252.0]
   (4)  mac address is from flash chip uid(first 6 bytes are set to mac address);
   (5)  xdc file is changed to make sure IP address is from jumpers on mobo;
+
+2020-01-08:
+ add another eth core into the design, but it doesn't work sometimes,
+ so I plan to add some memory for the design
+

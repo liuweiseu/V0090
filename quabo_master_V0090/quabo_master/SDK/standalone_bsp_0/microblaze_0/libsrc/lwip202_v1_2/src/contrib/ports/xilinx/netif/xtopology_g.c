@@ -10,6 +10,14 @@ struct xtopology_t xtopology[] = {
 		0x0,
 		0x0,
 	},
+	{
+		0x40C40000,
+		xemac_type_axi_ethernet,
+		0x0,
+		-1,
+		0x0,
+		0x0,
+	},
 };
 
-int xtopology_n_emacs = 1;
+int xtopology_n_emacs = 2;

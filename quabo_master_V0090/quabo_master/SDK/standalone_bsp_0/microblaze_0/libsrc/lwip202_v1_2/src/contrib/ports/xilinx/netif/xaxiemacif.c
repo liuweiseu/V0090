@@ -61,6 +61,8 @@
 #include "lwip/ethip6.h"
 #endif
 
+#include "casper_tftp.h"
+
 /* Define those to better describe your network interface. */
 #define IFNAME0 't'
 #define IFNAME1 'e'
@@ -648,6 +650,32 @@ xaxiemacif_mac_filter_update (struct netif *netif, ip_addr_t *group,
 }
 #endif
 
+
+static
+void
+casper_netif_status_callback(struct netif *netif)
+{
+  err_t rc;
+
+#ifdef VERBOSE_ETH_IMPL
+  xil_printf("casper_netif_status_callback()\r\n");
+#endif // VERBOSE_ETH_IMPL
+  xil_printf("IP %08X  NM %08X  GW %08X\r\n",
+      mb_swapb(netif->ip_addr.addr),
+      mb_swapb(netif->netmask.addr),
+      mb_swapb(netif->gw.addr));
+
+  if(netif->ip_addr.addr != 0) {
+    if((rc = casper_tftp_init()) != ERR_OK) {
+      xil_printf("TAPCP server startup failed (%d)\r\n", rc);
+    } else {
+      xil_printf("TAPCP server ready\r\n");
+    }
+  }
+#ifdef VERBOSE_ETH_IMPL
+  else print("no ip address, NOT starting TAPCP\r\n");
+#endif // VERBOSE_ETH_IMPL
+}
 /*
  * xaxiemacif_init():
  *
@@ -680,6 +708,8 @@ xaxiemacif_init(struct netif *netif)
 	netif->name[1] = IFNAME1;
 	netif->output = xaxiemacif_output;
 	netif->linkoutput = low_level_output;
+	// Add status callback
+	netif->status_callback = casper_netif_status_callback;
 #if LWIP_IPV6
 	netif->output_ip6 = ethip6_output;
 #endif

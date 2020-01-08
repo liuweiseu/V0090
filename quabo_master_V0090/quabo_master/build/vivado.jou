@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3_AR71948 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Dec 18 11:03:41 2019
+# Process ID: 23498
+# Current directory: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build
+# Command line: vivado -mode tcl
+# Log file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/vivado.log
+# Journal file: /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/build/vivado.jou
+#-----------------------------------------------------------
+pwd
+build_quabo.tcl
+source build_quabo.tcl 

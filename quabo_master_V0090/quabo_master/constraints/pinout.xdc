@@ -22,6 +22,21 @@ set_property PACKAGE_PIN R4 [get_ports sfp_0_rxp]
 #set_property DIFF_TERM TRUE [get_ports SMA1_n]
 #set_property PACKAGE_PIN AB17 [get_ports SMA1_p]
 
+set_property PACKAGE_PIN N3 [get_ports sfp_1_rxn]
+set_property PACKAGE_PIN N4 [get_ports sfp_1_rxp]
+set_property PACKAGE_PIN M1 [get_ports sfp_1_txn]
+set_property PACKAGE_PIN M2 [get_ports sfp_1_txp]
+
+set_property IOSTANDARD LVDS [get_ports sysclkin_p]
+set_property DIFF_TERM TRUE [get_ports sysclkin_p]
+set_property DIFF_TERM TRUE [get_ports sysclkin_n]
+#set_property PACKAGE_PIN AC16 [get_ports sysclkin_n]
+set_property PACKAGE_PIN AB16 [get_ports sysclkin_p]
+
+set_property IOSTANDARD LVDS [get_ports sysclkout_p]
+set_property DIFF_TERM TRUE [get_ports sysclkout_p]
+#set_property PACKAGE_PIN AE20 [get_ports sysclkout_n]
+set_property PACKAGE_PIN AD20 [get_ports sysclkout_p]
 
 
 #set_property IOSTANDARD LVCMOS33 [get_ports {SPI_SS[5]}]
@@ -466,7 +481,7 @@ set_property PACKAGE_PIN H26 [get_ports {board_loc[9]}]
 #27 C23 CS
 set_property PACKAGE_PIN C23 [get_ports ss_o_0]
 set_property IOSTANDARD LVCMOS33 [get_ports ss_o_0]
-#28 B24 
+#28 B24
 set_property PACKAGE_PIN B24 [get_ports mosi_o_0]
 set_property IOSTANDARD LVCMOS33 [get_ports mosi_o_0]
 #29 A25
@@ -495,24 +510,24 @@ set_property DIFF_TERM TRUE [get_ports FRM_CLK_N]
 #set_property DIFF_TERM TRUE [get_ports {SMA1_N[0]}]
 
 
-set_property IOSTANDARD LVCMOS33 [get_ports J3pin1]
-set_property IOSTANDARD LVCMOS33 [get_ports J3pin2] 
+set_property IOSTANDARD LVCMOS33 [get_ports {J3pin1[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports J3pin2]
 set_property IOSTANDARD LVCMOS33 [get_ports J3pin3]
 set_property IOSTANDARD LVCMOS33 [get_ports J3pin4]
 set_property IOSTANDARD LVCMOS33 [get_ports J3pin5]
 set_property IOSTANDARD LVCMOS33 [get_ports J3pin6]
-set_property PACKAGE_PIN B20 [get_ports J3pin1];    #OnePPS
+set_property PACKAGE_PIN B20 [get_ports {J3pin1[0]}]
 #Use this as board_loc[0] til we all have Mobos
 #set_property PACKAGE_PIN A20 [get_ports J3pin2]
-set_property PACKAGE_PIN E21 [get_ports J3pin3];    #WR_UART_RXD
-set_property PULLDOWN true [get_ports J3pin3];    #WR_UART_RXD
-set_property PACKAGE_PIN E22 [get_ports J3pin4];    #WR_UART_TXD
-set_property PACKAGE_PIN C21 [get_ports J3pin5];    #MB_UART_RXD
-set_property PULLDOWN true [get_ports J3pin5];    #WR_UART_RXD
-set_property PACKAGE_PIN B21 [get_ports J3pin6];    #MB_UART_TXD
+set_property PACKAGE_PIN E21 [get_ports J3pin3]
+set_property PULLDOWN true [get_ports J3pin3]
+set_property PACKAGE_PIN E22 [get_ports J3pin4]
+set_property PACKAGE_PIN C21 [get_ports J3pin5]
+set_property PULLDOWN true [get_ports J3pin5]
+set_property PACKAGE_PIN B21 [get_ports J3pin6]
 
-set_property IOSTANDARD LVCMOS33 [get_ports SMA_J1[0]]
-set_property PACKAGE_PIN G24 [get_ports SMA_J1[0]]
+set_property IOSTANDARD LVCMOS33 [get_ports SMA_J1]
+set_property PACKAGE_PIN G24 [get_ports SMA_J1]
 
 set_property CONFIG_MODE SPIx1 [current_design]
 
@@ -576,6 +591,8 @@ set_property PACKAGE_PIN G4 [get_ports user_sfp_0_sfp_rxp_i]
 set_property PACKAGE_PIN F1 [get_ports user_sfp_0_sfp_txn_o]
 set_property PACKAGE_PIN F2 [get_ports user_sfp_0_sfp_txp_o]
 
+
+
 set_property IOSTANDARD LVCMOS33 [get_ports pps_o_0]
 set_property PACKAGE_PIN B20 [get_ports pps_o_0]
 
@@ -586,4 +603,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports pll20dac_cs_n_o_0]
 
 set_property PACKAGE_PIN D26 [get_ports pll25dac_cs_n_o_0]
 set_property IOSTANDARD LVCMOS33 [get_ports pll25dac_cs_n_o_0]
+
 

@@ -4,5 +4,5 @@ targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag
 rst -system
 after 3000
 targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Platform Cable USB 0000117dd2cb01"} -index 0
-dow /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/SDK/quabo_service/Debug/quabo_service.elf
+dow /media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V0090/quabo_master_V0090/quabo_master/SDK/quabo_service/Debug/quabo_service.elf
 bpadd -addr &main
